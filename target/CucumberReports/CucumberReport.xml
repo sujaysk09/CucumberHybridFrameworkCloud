@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="171.009" tests="14" skipped="0" failures="2" errors="0">
+<testcase classname="Login Functionality" name="Login with valid credentials - #1.1" time="15.858">
+<system-out><![CDATA[
+Given User navigates to login page..........................................passed
+When User enters valid email address sujay1@gmail.com.......................passed
+And User enters valid password 12345........................................passed
+And User clicks on login button.............................................passed
+Then User should login successfully.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Functionality" name="Login with valid credentials - #1.2" time="12.577">
+<system-out><![CDATA[
+Given User navigates to login page..........................................passed
+When User enters valid email address sujay2@gmail.com.......................passed
+And User enters valid password 12345........................................passed
+And User clicks on login button.............................................passed
+Then User should login successfully.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Functionality" name="Login with valid credentials - #1.3" time="12.47">
+<system-out><![CDATA[
+Given User navigates to login page..........................................passed
+When User enters valid email address sujay3@gmail.com.......................passed
+And User enters valid password 12345........................................passed
+And User clicks on login button.............................................passed
+Then User should login successfully.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Functionality" name="Login with invalid credentials" time="11.808">
+<system-out><![CDATA[
+Given User navigates to login page..........................................passed
+When User enters invalid email address......................................passed
+And User enters invalid password "12345"....................................passed
+And User clicks on login button.............................................passed
+Then User should get proper warning messsage................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Functionality" name="Login with valid email and invalid password" time="11.243">
+<system-out><![CDATA[
+Given User navigates to login page..........................................passed
+When User enters valid email address "sujaykekare111@gmail.com".............passed
+And User enters invalid password "6789".....................................passed
+And User clicks on login button.............................................passed
+Then User should get proper warning messsage................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Functionality" name="Login with invalid email and valid password" time="11.103">
+<system-out><![CDATA[
+Given User navigates to login page..........................................passed
+When User enters invalid email address......................................passed
+And User enters valid password "12345"......................................passed
+And User clicks on login button.............................................passed
+Then User should get proper warning messsage................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Functionality" name="Login with no credentials" time="11.17">
+<failure type="java.lang.AssertionError">
+<![CDATA[java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.fail(Assert.java:95)
+	at stepdefinitions.Login.user_do_not_enter_email_address(Login.java:70)
+	at ✽.User do not enter email address(file:///C:/Users/Administrator/BDD_Cucumber_Framework/BDDCucumberProject/src/test/resources/features/Login.feature:38)
+]]>
+</failure>
+<system-out><![CDATA[
+Given User navigates to login page..........................................passed
+When User do not enter email address........................................failed
+And User do not enter password..............................................skipped
+And User clicks on login button.............................................skipped
+Then User should get proper warning messsage................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Register functionality" name="Register with mandatory fields" time="12.421">
+<system-out><![CDATA[
+Given User navigates to Register account page...............................passed
+When User enters below details into fields..................................passed
+And Selects Privacy Policy field............................................passed
+And Clicks on Continue button...............................................passed
+Then Account should be successfully created.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Register functionality" name="Register with all fields" time="12.406">
+<system-out><![CDATA[
+Given User navigates to Register account page...............................passed
+When User enters below details into fields..................................passed
+And Selects Yes for Newsletter..............................................passed
+And Selects Privacy Policy field............................................passed
+And Clicks on Continue button...............................................passed
+Then Account should be successfully created.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Register functionality" name="Register without providing any fields" time="14.976">
+<system-out><![CDATA[
+Given User navigates to Register account page...............................passed
+When User dont enter details into any fields................................passed
+And Clicks on Continue button...............................................passed
+Then Warning messages should be displyaed in the mandatory fields...........passed
+]]></system-out>
+</testcase>
+<testcase classname="Register functionality" name="Register with duplicate email address field" time="13.099">
+<system-out><![CDATA[
+Given User navigates to Register account page...............................passed
+When User enters below details into fields with duplicate email.............passed
+And Selects Privacy Policy field............................................passed
+And Clicks on Continue button...............................................passed
+Then User should get proper warning messsage about duplicate email address..passed
+]]></system-out>
+</testcase>
+<testcase classname="Search fuctionality" name="Search for a valid product" time="10.531">
+<failure type="java.lang.AssertionError">
+<![CDATA[java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.fail(Assert.java:95)
+	at stepdefinitions.Search.valid_product_should_display_in_search_results(Search.java:68)
+	at ✽.Valid product should display in search results(file:///C:/Users/Administrator/BDD_Cucumber_Framework/BDDCucumberProject/src/test/resources/features/Search.feature:11)
+]]>
+</failure>
+<system-out><![CDATA[
+Given User opens the application............................................passed
+When User enters valid product "HP" into Search field.......................passed
+And User clicks on search button............................................passed
+Then Valid product should display in search results.........................failed
+]]></system-out>
+</testcase>
+<testcase classname="Search fuctionality" name="Search for non-existing product" time="10.422">
+<system-out><![CDATA[
+Given User opens the application............................................passed
+When User enters non-existing product "Honda" into Search field.............passed
+And User clicks on search button............................................passed
+Then Proper message informing the user about no product matching should be displayed.passed
+]]></system-out>
+</testcase>
+<testcase classname="Search fuctionality" name="Search without providing any product" time="10.258">
+<system-out><![CDATA[
+Given User opens the application............................................passed
+When User dont enter any product into Search field..........................passed
+And User clicks on search button............................................passed
+Then Proper message informing the user about no product matching should be displayed.passed
+]]></system-out>
+</testcase>
+</testsuite>

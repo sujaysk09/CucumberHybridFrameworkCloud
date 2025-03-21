@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: runner.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 14, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 173.8 s <<< FAILURE! -- in runner.TestRunner
+Login Functionality.Login with no credentials -- Time elapsed: 11.19 s <<< FAILURE!
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.fail(Assert.java:95)
+	at stepdefinitions.Login.user_do_not_enter_email_address(Login.java:70)
+	at ✽.User do not enter email address(file:///C:/Users/Administrator/BDD_Cucumber_Framework/BDDCucumberProject/src/test/resources/features/Login.feature:38)
+
+Search fuctionality.Search for a valid product -- Time elapsed: 10.55 s <<< FAILURE!
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.fail(Assert.java:95)
+	at stepdefinitions.Search.valid_product_should_display_in_search_results(Search.java:68)
+	at ✽.Valid product should display in search results(file:///C:/Users/Administrator/BDD_Cucumber_Framework/BDDCucumberProject/src/test/resources/features/Search.feature:11)
+
